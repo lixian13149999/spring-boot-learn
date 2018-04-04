@@ -8,6 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2018/4/3 下午4:22
  * @description HelloWorld 的启动类
  */
+/*
+ * 注解表明这是 Spring 的主配置文件
+ */
 @SpringBootApplication
 public class HelloWorldApplication {
 	/**
