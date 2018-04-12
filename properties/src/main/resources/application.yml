@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    # \u8BBE\u7F6E\u4F7F\u7528\u7684\u914D\u7F6E\u6587\u4EF6\u4E3A random \u540E\u7F00\u7684
+    active: random
+
+# \u4FA7\u56DB\u4E2D\u4F7F\u7528\u7684\u4F5C\u8005\u4FE1\u606F
+author:
+  # \u59D3\u540D
+  name: summer
+  # \u5E74\u9F84
+  age: 18
+  # \u6027\u522B
+  gender: man
+
+  # Map \u7684\u6D4B\u8BD5\u6570\u636E
+  wife[name]: lili
+  wife[age]: 19
+
+  # List \u7684\u6D4B\u8BD5\u6570\u636E
+  books[0]: spring
+  books[1]: java
+
+  # \u53C2\u6570\u95F4\u7684\u5F15\u7528
+  introduce: Name:${author.name},Age:${author.gender}
+

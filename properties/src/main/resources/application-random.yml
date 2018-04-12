@@ -1,0 +1,12 @@
+author:
+  property:
+    # 随机字符串
+    value: ${random.value}
+    # 随机 int
+    number: ${random.int}
+    # 随机 long
+    bignumber: ${random.long}
+    # 10 以内的随机数
+    number1: ${random.int(10)}
+    # 10-20的随机数
+    number2: ${random.int[10,20]}
