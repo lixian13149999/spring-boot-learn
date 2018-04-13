@@ -7,6 +7,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
@@ -46,10 +47,16 @@ public class HelloWorldControllerTest {
     @Test
     public void helloWorld() throws Exception {
         //设定请求路径及请求方式并执行请求
-        mockMvc.perform(MockMvcRequestBuilders.get("/demo/hello"))
-                //判断返回的状态是否ok
+        MvcResult mvcResult = mockMvc.perform(
+                MockMvcRequestBuilders.get("/demo/hello")
+                        // 请求时传入的参数
+                        .param("name", "value")
+                )
+                // 判断返回的状态是否ok
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                //判断内容是否和预计内容一致
-                .andExpect(MockMvcResultMatchers.content().string("Hello World"));
+                // 判断内容是否和预计内容一致
+                .andExpect(MockMvcResultMatchers.content().string("Hello World"))
+                // 发送请求后需要获取放回时调用
+                .andReturn();
     }
 }

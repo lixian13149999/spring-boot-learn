@@ -1,25 +1,30 @@
 spring:
   profiles:
-    # \u8BBE\u7F6E\u4F7F\u7528\u7684\u914D\u7F6E\u6587\u4EF6\u4E3A random \u540E\u7F00\u7684
+    # 设置使用的配置文件为 random 后缀的
     active: random
 
-# \u4FA7\u56DB\u4E2D\u4F7F\u7528\u7684\u4F5C\u8005\u4FE1\u606F
+# 测试中使用的作者信息
 author:
-  # \u59D3\u540D
+  # 姓名
   name: summer
-  # \u5E74\u9F84
+  # 年龄
   age: 18
-  # \u6027\u522B
+  # 性别
   gender: man
 
-  # Map \u7684\u6D4B\u8BD5\u6570\u636E
+  # Map 的测试数据
   wife[name]: lili
   wife[age]: 19
 
-  # List \u7684\u6D4B\u8BD5\u6570\u636E
+  # List 的测试数据
   books[0]: spring
   books[1]: java
 
-  # \u53C2\u6570\u95F4\u7684\u5F15\u7528
+  # 参数间的引用
   introduce: Name:${author.name},Age:${author.gender}
+
+  # 测试配置的优先级
+  # 在主配置文件和指定环境配置文件中同时定义相同的参数时, 主配置文件中的参数会被覆盖
+  property:
+    value: 123123
 

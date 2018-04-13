@@ -28,7 +28,7 @@ public class AuthorObject {
      */
     private Map<String, Object> wife;
     /**
-     * 出品的书籍
+     * 出品的书籍 用于演示 list
      */
     private List<String> books;
 
