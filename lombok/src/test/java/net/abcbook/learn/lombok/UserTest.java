@@ -38,9 +38,18 @@ public class UserTest {
         Assert.assertEquals(assertId, user.getId());
     }
 
+    /**
+     * @author summer
+     * @date 2018/5/28 上午10:44
+     * @return void
+     * @description 全参的 ToString 方法
+     */
     @Test
     public void allArgsToString(){
         User user = new User("username", "password", 18);
+        // 如果想使用除了全参(本类)和空参以外的其他构造方法, 则需要自己去定义
+        // User user1 = new User(1231L, "username1","password1", 181);
+        // 这里调用的是父类 `BaseModel` 中的 `Setter` 方法
         user.setId(123L);
 
 
