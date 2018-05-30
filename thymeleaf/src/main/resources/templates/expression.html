@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>expression</title>
+</head>
+<body>
+<h1>expression</h1>
+
+
+<p th:text="${testerName}">测试者名称</p>
+
+<div style="border: solid #333 1px" th:object="${user}">
+    <!--可用值表达式(后台设置)-->
+    <p th:text="*{name}"></p>
+    <p th:text="*{age}"></p>
+    <p th:text="*{sex}"></p>
+    <p>
+        <!--链接表达式-->
+        <a th:href="@{*{blogUrl}}" href="www.baidu.com">我的博客</a>
+    </p>
+    <p>
+        <a th:href="@{*{blog}}" href="www.baidu.com">博客内容</a>
+    </p>
+</div>
+
+<div th:style="'border: solid red 1px'" style="border: solid #333 1px">
+    <!--所有可用值表达式-->
+    <p th:text="${user.name}"></p>
+    <p th:text="${user.age}"></p>
+    <p th:text="${user.sex}"></p>
+    <p>
+        <a th:href="@{${user.blogUrl}}" href="www.baidu.com">我的博客</a>
+    </p>
+    <p>
+        <a th:href="@{${user.blog}}" href="www.baidu.com">博客内容</a>
+    </p>
+</div>
+
+
+</body>
+</html>
