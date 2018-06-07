@@ -2,17 +2,28 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hello-world" />
+        <module name="hello-world (1)" />
+        <module name="lombok" />
+        <module name="properties" />
         <module name="spring-boot-learn" />
+        <module name="test-hello" />
+        <module name="thymeleaf" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hello-world" target="1.8" />
+      <module name="hello-world (1)" target="1.8" />
+      <module name="lombok" target="1.8" />
+      <module name="properties" target="1.8" />
       <module name="spring-boot-learn" target="1.5" />
+      <module name="test-hello" target="1.8" />
+      <module name="thymeleaf" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

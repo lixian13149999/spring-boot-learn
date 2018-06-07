@@ -5,6 +5,10 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/hello-world/pom.xml" />
+        <option value="$PROJECT_DIR$/test-hello/pom.xml" />
+        <option value="$PROJECT_DIR$/properties/pom.xml" />
+        <option value="$PROJECT_DIR$/lombok/pom.xml" />
+        <option value="$PROJECT_DIR$/thymeleaf/pom.xml" />
       </list>
     </option>
   </component>
