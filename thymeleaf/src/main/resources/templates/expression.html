@@ -19,9 +19,10 @@
         <!--链接表达式-->
         <a th:href="@{*{blogUrl}}" href="www.baidu.com">我的博客</a>
     </p>
-    <p>
-        <a th:href="@{*{blog}}" href="www.baidu.com">博客内容</a>
-    </p>
+    <div th:text="*{blog}">
+        博客内容
+    </div>
+
 </div>
 
 <div th:style="'border: solid red 1px'" style="border: solid #333 1px">
@@ -32,9 +33,9 @@
     <p>
         <a th:href="@{${user.blogUrl}}" href="www.baidu.com">我的博客</a>
     </p>
-    <p>
-        <a th:href="@{${user.blog}}" href="www.baidu.com">博客内容</a>
-    </p>
+    <div th:utext="${user.blog}" itemprop="articleBody">
+        博客内容
+    </div>
 </div>
 
 

@@ -16,11 +16,12 @@ public class ExpressionController {
 
     @GetMapping
     public String expression(ModelMap modelMap){
-        User user = new User("summer",18,1,"http://blog.abcbook.net","bolg");
+        String blog = "<h2>这是博客标题</h2>";
+        User user = new User("summer",18,1,"http://blog.abcbook.net",blog);
         user.setAge(null);
         String testerName = "tester";
         modelMap.addAttribute("user", user);
-//        modelMap.addAttribute("testerName", testerName);
+        modelMap.addAttribute("testerName", testerName);
 
         return "/expression";
     }
